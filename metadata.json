@@ -1,0 +1,7 @@
+{
+  "name": "Smart Plant Health",
+  "description": "An AI-powered assistant to help farmers identify plant diseases, get expert-level solutions, and secure their farm's profitability. This app uses the Gemini API for advanced image analysis and recommendations.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
