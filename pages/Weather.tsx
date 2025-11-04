@@ -76,7 +76,7 @@ const Weather: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const weatherSystemInstruction = "You are a helpful weather assistant. Based on the provided latitude and longitude, give a current weather report and a simple 3-day forecast. The user is a farmer in India. Use Celsius for temperature and km/h for wind speed. Structure your response clearly with headings 'Current Weather' and '3-Day Forecast'. Do not use Markdown. Example format:\nCurrent Weather\nTemperature: 28°C\nCondition: Sunny\nHumidity: 60%\nWind Speed: 10 km/h\n\n3-Day Forecast\nTomorrow: 30°C, Partly Cloudy\nDay After Tomorrow: 29°C, Showers\nIn 3 Days: 31°C, Sunny";
+  const weatherSystemInstruction = "You are a helpful weather assistant. Based on the provided latitude and longitude, give a current weather report and a simple 7-day forecast. The user is a farmer in India. Use Celsius for temperature and km/h for wind speed. Structure your response clearly with headings 'Current Weather' and '7-Day Forecast'. Do not use Markdown. Example format:\nCurrent Weather\nTemperature: 28°C\nCondition: Sunny\nHumidity: 60%\nWind Speed: 10 km/h\n\n7-Day Forecast\nTomorrow: 30°C, Partly Cloudy\nDay After Tomorrow: 29°C, Showers\nIn 3 Days: 31°C, Sunny\nIn 4 Days: 30°C, Sunny\nIn 5 Days: 29°C, Rainy\nIn 6 Days: 28°C, Cloudy\nIn 7 Days: 30°C, Sunny";
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -150,8 +150,8 @@ const Weather: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-xl shadow-md border border-gray-100 p-6">
-                 <h2 className="text-xl font-bold mb-4">3-Day Forecast</h2>
-                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                 <h2 className="text-xl font-bold mb-4">7-Day Forecast</h2>
+                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
                     {weather.forecast?.map(day => (
                         <div key={day.day} className="bg-gray-50 rounded-lg p-4 flex flex-col items-center text-center">
                              <p className="font-bold text-lg">{day.day}</p>
