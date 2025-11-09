@@ -10,6 +10,7 @@ export interface WeatherData {
 export interface MarketData {
   date: string;
   price: number;
+  type?: 'historical' | 'predicted';
 }
 
 export interface ChatMessage {
