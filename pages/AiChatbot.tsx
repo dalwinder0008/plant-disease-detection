@@ -40,7 +40,7 @@ const AiChatbot: React.FC = () => {
 
 
   return (
-    <div className="flex flex-col h-full bg-white rounded-xl shadow-md border border-gray-100">
+    <div className="flex flex-col flex-1 bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
       <div className="p-4 border-b">
         <h2 className="text-xl font-bold">AI Chatbot</h2>
         <p className="text-sm text-gray-500">Ask any farming-related question.</p>

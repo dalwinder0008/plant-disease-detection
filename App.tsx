@@ -19,8 +19,8 @@ const App: React.FC = () => {
     <HashRouter>
       <div className="flex h-screen w-full font-sans bg-white">
         <Sidebar />
-        <div className="flex flex-col flex-1 h-screen overflow-y-hidden">
-          <main className="flex-1 overflow-y-auto bg-gray-50 p-4 md:p-6 lg:p-8">
+        <div className="flex flex-col flex-1 min-w-0">
+          <main className="flex-1 flex flex-col overflow-y-auto bg-gray-50 p-4 md:p-6 lg:p-8 pb-24 md:pb-6 lg:pb-8">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/check-disease" element={<CheckDisease />} />
